@@ -1,0 +1,135 @@
+.min-width {
+  width: 1190px;
+  margin: auto;
+}
+.login {
+  min-width: 1240px;
+  margin: 0 auto;
+}
+.login-header {
+  color: #fff;
+  font-size: 20px;
+  background-color: #07498C;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  clear: both;
+}
+.login-header-left {
+  float: left;
+  width: 75%;
+  padding-left: 60px;
+  font-size: 12px;
+  background: url("../../../assets/img/log_join.png") no-repeat 0;
+  background-size: 45px 45px;
+}
+.login-header-title {
+  font-size: 24px;
+}
+.login-header-right {
+  float: left;
+  width: 25%;
+  text-align: right;
+  padding-top: 8px;
+}
+.login-header-wrapper {
+  width: 1190px;
+  margin: 0 auto;
+}
+.login-top {
+  background-color: #C33831;
+  height: 400px;
+  clear: both;
+  overflow: hidden;
+}
+.login-top-left {
+  float: left;
+  width: 840px;
+  height: 100%;
+}
+.login-top .ant-carousel {
+  height: 100%;
+}
+.login-top .ant-carousel .slick-slider {
+  height: 100%;
+}
+.login-top .ant-carousel li.slick-active button:before {
+  color: #fff;
+}
+.login-top .ant-carousel .slick-dots li button:before {
+  font-size: 25px;
+}
+.login-slide {
+  overflow: hidden;
+}
+.login-slide img {
+  height: 100%;
+  width: 100%;
+}
+.login-btn {
+  background-color: #6CC918;
+  color: #fff;
+  font-size: 20px;
+  height: 48px;
+  width: 100%;
+}
+.login-btn:active {
+  opacity: .8;
+}
+.login-product {
+  overflow: hidden;
+}
+.login-product-introduction {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #F0F0F0;
+}
+.login-product-title {
+  font-size: 33px;
+}
+.login-product-position {
+  height: 550px;
+  position: relative;
+  background: url("../../../assets/img/log_2.png") no-repeat right center;
+  border-bottom: 1px dashed #F0F0F0;
+}
+.login-product-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #333;
+}
+.login-product-left p {
+  width: 600px;
+  letter-spacing: 2px;
+}
+.login-product-text {
+  color: #224ba5;
+  font-size: 30px;
+  width: 640px !important;
+}
+.login-product-run {
+  background: url("../../../assets/img/log_3.png") no-repeat left center;
+}
+.login-product-integrate {
+  background: url("../../../assets/img/log_4.png") no-repeat right center;
+}
+.login-product-integrate p {
+  width: 650px;
+}
+.login-product-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #333;
+}
+.login-product-right p {
+  width: 670px;
+  letter-spacing: 2px;
+}

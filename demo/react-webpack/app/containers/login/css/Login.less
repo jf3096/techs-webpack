@@ -1,0 +1,150 @@
+.min-width {
+  width: 1190px;
+  margin: auto;
+}
+
+@O2O_LOGIN_WIDTH: 1190px;
+
+@Login: login;
+
+.@{Login} {
+  min-width: 1240px;
+  margin: 0 auto;
+
+  &-header {
+    color: #fff;
+    font-size: 20px;
+    background-color: #07498C;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow: hidden;
+    clear: both;
+    &-left {
+      float: left;
+      width: 75%;
+      padding-left: 60px;
+      font-size: 12px;
+      background: url("../../../assets/img/log_join.png") no-repeat 0;
+      background-size: 45px 45px;
+    }
+
+    &-title {
+      font-size: 24px;
+    }
+
+    &-right {
+      float: left;
+      width: 25%;
+      text-align: right;
+      padding-top: 8px;
+    }
+  }
+
+  &-header-wrapper {
+    width: @O2O_LOGIN_WIDTH;
+    margin: 0 auto;
+  }
+
+  &-top {
+    background-color: #C33831;
+    height: 400px;
+    clear: both;
+    overflow: hidden;
+    &-left {
+      float: left;
+      width: 840px;
+      height: 100%;
+    }
+
+    .ant-carousel {
+      height: 100%;
+    }
+    .ant-carousel .slick-slider {
+      height: 100%;
+    }
+
+    .ant-carousel li.slick-active button:before {
+      color: #fff;
+    }
+
+    .ant-carousel .slick-dots li button:before {
+      font-size: 25px;
+    }
+  }
+
+  &-slide {
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &-btn {
+    background-color: #6CC918;
+    color: #fff;
+    font-size: 20px;
+    height: 48px;
+    width: 100%;
+    &:active {
+      opacity: .8;
+    }
+  }
+
+  &-product {
+    overflow: hidden;
+    &-introduction {
+      font-size: 16px;
+      color: #666;
+      text-align: center;
+      padding: 12px;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    &-title {
+      font-size: 33px;
+    }
+    &-position {
+      height: 550px;
+      position: relative;
+      background: url("../../../assets/img/log_2.png") no-repeat right center;
+      border-bottom: 1px dashed #F0F0F0;
+    }
+    &-left {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #333;
+      p {
+        width: 600px;
+        letter-spacing: 2px;
+      }
+    }
+    &-text {
+      color: #224ba5;
+      font-size: 30px;
+      width: 640px !important;
+    }
+    &-run {
+      background: url("../../../assets/img/log_3.png") no-repeat left center;
+    }
+    &-integrate {
+      background: url("../../../assets/img/log_4.png") no-repeat right center;
+      p {
+        width: 650px;
+      }
+    }
+    &-right {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #333;
+      p {
+        width: 670px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
