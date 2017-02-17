@@ -332,4 +332,80 @@ React不多说，不是这次分享的主要内容，所以先直接跳过，安
 
 ### 登录页面
 
-演示。。。
+首先我们先创建一个<i>react-webpack/app/containers</i>的文件夹， containers容器主要用于创建页面，每一个页面一个containers，
+containers只做组件拼装，不做逻辑逻辑交互。
+
+然后我们创建一个<i>react-webpack/app/containers/login/Login.tsx</i>的文件,代码从一个静态页面模板复制过去即可：
+
+```bash
+import * as React from 'react';
+import './css/Login.less';
+
+export default class Login extends React.Component<void,void> {
+    render() {
+        return (
+            <div>
+                HTML代码。。。
+            </div>
+        )
+    }
+}
+```
+由于每一个html模块对应相应的样式，所以我们需要引入<i>import './css/Login.less';</i>,这样这个页面就完成了。
+
+执行一下编译，但是问题来了你会遇到这样的报错：
+
+![alt tag](./assets/imgs/webpack缺失less-loader.png)
+
+不要方！翻一下，"you need an appropriate loader to handle this file type" => "你需要一个合适的loader去处理这个文件类型（在这里是less）"，
+所以这个时候我们需要less-loader来修正这个错误。
+
+```bash
+    npm install --save-dev style-loader css-loader less-loader
+```
+
+新的<i>webpack.config.ts</i>配置如下：
+```typescript
+    export = {
+        devtool: 'eval-source-map',
+        entry: __dirname + "/app/index.js",
+        output: {
+            path: __dirname + "/public",
+            filename: "bundle.js"
+        },
+        devServer: {
+            contentBase: "./public",//本地服务器所加载的页面所在的目录
+            historyApiFallback: true,//不跳转
+            inline: true//实时刷新
+        },
+        module: {
+            loaders: [
+                {
+                    test: /\.less$/,
+                    //这里需要3个loader的原因是因为要把less转换成css后解析成style，最终附加到页面中
+                    loader: 'style-loader!css-loader!less-loader'
+                }
+            ]
+        }
+    };
+```
+
+再次执行编译，错误依旧存在
+
+![alt tag](./assets/imgs/webpack缺失file-loader.png)
+
+那么就安装吧：
+```bash
+    npm install --save-dev file-loader url-loader
+```
+
+加入后更新<i>webpack.config.ts</i>，在module下加入如下代码：
+```json
+    {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'url-loader?limit=8192'
+    }
+```
+
+运行通过：
+![alt tag](./assets/imgs/webpack登录界面基本雏形.png)
