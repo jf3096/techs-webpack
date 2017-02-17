@@ -34,10 +34,10 @@ webpack代码截取
             {
                 /* 解析less通过postcss管理最终转换成style */
                 test:/\.less/,
-                loader:'style!css!postcss!less',
+                loader:'style-loader!css-loader!postcss-loader!less-loader',
             },
             {
-                /* 解析less并转换成style */
+                /* 解析png */
                 test:/\.png$/,loader:'url-loader?limit=10000'
             }
         ]
@@ -117,7 +117,7 @@ webpack可以使用npm/yarn安装，新建一个空的练习文件夹（此处�
 ```
 
 <b><i>app/index.js</i>为编译入口点，webpack会根据import的依赖关系编译合并最终部署到public/bundle.js</b>
-![alt tag](./assets/imgs/webpack-simple编译生成.png)
+![alt tag](/assets/imgs/webpack-simple编译生成.png)
 
 
 打开<i>simple-webpack/public/index.html</i>
